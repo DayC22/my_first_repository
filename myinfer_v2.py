@@ -135,7 +135,7 @@ def vc_single(sid,input_audio,f0_up_key,f0_file,f0_method,file_index,index_rate)
     times = [0, 0, 0]
     if(hubert_model==None):load_hubert()
     if_f0 = cpt.get("f0", 1)   
-    audio_opt=vc.pipeline(hubert_model,net_g,sid,audio,input_audio,times,f0_up_key,f0_method,file_index,index_rate,if_f0,filter_radius,tgt_sr,resample_sr,rms_mix_rate,version,protect,f0_file=f0_file)
+    audio_opt=vc.pipeline(hubert_model,net_g,sid,audio,input_audio,times,f0_up_key,f0_method,file_index,index_rate,if_f0,filter_radius,tgt_sr,resample_sr,rms_mix_rate,version,f0_file=f0_file)
     print(times)
     return audio_opt
 
